@@ -8,7 +8,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddDbContext<AppDbContext>(
     options => options
     .UseSqlServer(
-        builder.Configuration.GetConnectionString("MyConn")
+        builder.Configuration.GetConnectionString("MyBackUpConn")
         )
     );
 

@@ -17,7 +17,6 @@ namespace BooksDemoRazor.Pages.Books
         }
         public void OnGet()
         {
-5
         }
     }
 }
