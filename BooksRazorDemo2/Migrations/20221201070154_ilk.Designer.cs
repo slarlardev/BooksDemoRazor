@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BooksRazorDemo2.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20221201065511_ilk")]
+    [Migration("20221201070154_ilk")]
     partial class ilk
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
