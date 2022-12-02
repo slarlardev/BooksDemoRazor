@@ -11,6 +11,6 @@ namespace BooksRazorDemo2.Data.Acces
 
         }
 
-        public DbSet<Book>? Books { get; set; }
+        public DbSet<Book> Books { get; set; }
     }
 }

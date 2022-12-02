@@ -1,12 +1,72 @@
 ﻿@page
 @model BooksRazorDemo2.Pages.Books.IndexModel
 @{
+    ViewData["Title"] = "Kitaplar";
+
+    if (TempData["basariliKayitGiris"] != null)
+    {
+        <p class="text-success">@TempData["basariliKayitGiris"]</p>
+    }
+
+    if (TempData["kayitSilindi"] != null)
+    {
+        <p class="text-danger">@TempData["kayitSilindi"]</p>
+    }
+    
+
 }
 
-<ul>
+<div class="container">
+    <div class="row align-items-center">
+        <div class="col-6">
+        <h1 class="text-xl fs-1">Book List</h1>
+        <a autofocus asp-page="create" class="btn btn-primary">CREATE</a>
+        </div>
+        <div class="col-6">
+            <h4 class="text-end">Açıklamalar</h4>
+        <p class="text-end">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed fermentum dui. In porttitor mi sem, vitae tincidunt quam rhoncus sed. Aenean nunc justo, posuere id neque </p>
+        </div>
 
-    @foreach (var b in Model.Books)
-    {
-    <li>@b.Id - @b.Title </li>
-    }
-</ul>
+    </div>
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10">
+            <table class="table table-success table-striped">
+                <thead>
+                    <tr>
+                        <td>Id</td>
+                        <td>Title</td>
+                        <td>Published Year</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var book in Model.Books)
+                    {
+                        <tr>
+                            <td width="10%">@book.Id</td>
+                            <td width="50%">@book.Title</td>
+                            <td width="20%">@book.PublishedYear</td>
+                            <td width="20%">
+                                <div>
+                                    <a asp-page="Edit" asp-route-id="@book.Id" class="btn btn-primary mx-2">
+                                <i class="bi bi-pencil-square"></i>
+                                    </a>
+                                    <a asp-page="Delete" asp-route-id="@book.Id" class="btn btn-primary mx-2">
+                                     <i class="bi bi-x-square"></i>
+                                </a>
+
+                                </div>
+
+                                
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="col-1">
+
+        </div>
+    </div>
+</div>

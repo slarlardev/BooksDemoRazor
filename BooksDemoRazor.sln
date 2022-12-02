@@ -5,7 +5,7 @@ VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BooksDemoRazor", "BooksDemoRazor\BooksDemoRazor.csproj", "{607985F6-BBE4-43E9-8626-8C862C2DB3D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksRazorDemo2", "BooksRazorDemo2\BooksRazorDemo2.csproj", "{EFBDFFA3-3F74-4EC9-8D45-FAE63217C268}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BooksRazorDemo2", "BooksRazorDemo2\BooksRazorDemo2.csproj", "{EFBDFFA3-3F74-4EC9-8D45-FAE63217C268}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
