@@ -6,7 +6,7 @@
 }
 
 <form method="post">
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div asp-validation-summary="All" class="text-danger"></div>
     <div class="border p-3 mt-4">
         <div class="row pb-2">
             <h2 class="text-primary pl-3">Create Book</h2>
@@ -14,12 +14,12 @@
         </div>
         <div class="mb-3">
             <label asp-for="Book.Title"></label>
-            <input asp-for="Book.Title" type="text" name="title" class="form-control" />
-            <span asp-validation-for="Book.Title"></span>
+            <input asp-for="Book.Title" class="form-control" />
+            <span asp-validation-for="Book.Title" class="text-danger"></span>
         </div>
         <div class="mb-3">
             <label asp-for="Book.PublishedYear"></label>
-            <input asp-for="Book.PublishedYear" type="number" name="publishedYear" class="form-control" />
+            <input asp-for="Book.PublishedYear" class="form-control"/>
             <span asp-validation-for="Book.PublishedYear" class="text-danger"></span>
         </div>
         <button type="submit" style="width:150px"> Create</button>

@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BooksRazorDemo2.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20221202062103_modeleYearEklendi")]
-    partial class modeleYearEklendi
+    [Migration("20221203130534_ilk")]
+    partial class ilk
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -35,6 +35,7 @@ namespace BooksRazorDemo2.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Title")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
